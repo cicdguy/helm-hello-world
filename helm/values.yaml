@@ -1,0 +1,23 @@
+# Default values for chart.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+replicaCount: 1
+image:
+  tag: latest
+  pullSecret: regsecret
+  pullPolicy: IfNotPresent
+  env:
+    FLASK_PORT: 5000
+service:
+  name: flask-hello-world
+  type: NodePort
+  externalPort: 5000
+  internalPort: 5000
+ingress:
+  enabled: true
+  hosts:
+    - flask-hello-world.local
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+  tls: {}
+resources: {}

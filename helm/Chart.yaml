@@ -1,0 +1,13 @@
+apiVersion: v2
+name: flask-hello-world
+version: 0.1.0
+kubeVersion: ">= 1.14.0"
+description: A simple Flask hello world application deployed on a local k8s cluster with Helm v3
+type: application
+keywords:
+  - flask
+  - hello-world
+icon: https://miro.medium.com/max/1400/1*U-R58ahr5dtAvtSLGK2wXg.png
+deprecated: false
+engine: gotpl
+appVersion: 0.1.0
